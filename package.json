@@ -1,0 +1,23 @@
+{
+  "name": "pmd-roleplay-beta",
+  "version": "0.0.1",
+  "description": "Provides the necessary userscripts to test out features for the site. These are scripts that will be placed on the site.",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "userscript",
+    "pmd-roleplay",
+    "js"
+  ],
+  "private": "true",
+  "author": "coaster3000",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
