@@ -2,7 +2,7 @@ module.exports = function(grunt) {
 	var defaultTasks = ['concat'/*, 'uglify'*/]; // used for watch as well
 
 	var files = [ 'src/UserScriptHeader.js', 'src/Header.js',
-				'src/Main.js', 'src/Footer.js' ];
+				'src/ToggleAnimations.js', 'src/Footer.js' ];
 
 	var opkg = grunt.file.readJSON('package.json');
 	grunt.initConfig({
