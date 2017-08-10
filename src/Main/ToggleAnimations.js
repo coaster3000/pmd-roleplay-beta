@@ -1,15 +1,16 @@
+const PMD_ANIMATE_COOKIE = "PMD-Animate";
 const ANIM_DISABLE_TXT = "Disable Animation";
 const ANIM_ENABLE_TXT = "Enable Animation";
 function setAnimations(value) {
-	var state = (my_getcookie("AnimatePMD") > 0);
+	var state = (my_getcookie(PMD_ANIMATE_COOKIE) > 0);
 	if (value != state) {
-		my_setcookie("AnimatePMD", (value?1:0), true);
+		my_setcookie(PMD_ANIMATE_COOKIE, (value?1:0), true);
 		updateAnimations();
 	}
 }
 
 function updateAnimations() {
-	var state = ((my_getcookie("AnimatePMD") || 0) > 0);
+	var state = ((my_getcookie(PMD_ANIMATE_COOKIE) || 0) > 0);
 	if (state)
 		$(".animation").addClass("animated");
 	else
