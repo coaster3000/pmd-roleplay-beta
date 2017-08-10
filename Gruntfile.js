@@ -18,6 +18,10 @@ module.exports = function(grunt) {
 			all: {
 				src: files,
 				dest: 'dist/<%= pkg.name %>.user.js',
+			},
+			meta: {
+				src: ['src/UserScriptHeader.js'],
+				dest: 'dist/<%= pkg.name %>.meta.js'
 			}
 		},
 
