@@ -7,10 +7,6 @@ function ajaxComplete() {
   initAjax();
 }
 
-function firstInitAjax() {
-  $("a.mainmenu,a.nav,a.forumlink").click(onAjaxClick);
-}
-
 function onAjaxClick(e) {
   //Display Loader ICON
   var loaderICON = "http://i.imgur.com/6ZwRMCn.gif";
@@ -22,13 +18,19 @@ function onAjaxClick(e) {
   $("#page-body").load(this.href + " #page-body > div", ajaxComplete);
   return false;
 }
+
 function initAjax(){
 
   if ($("#chatbox_top").length > 0) { //Chatbox re-init
     $("#chatbox_top").html(`<iframe src="/chatbox/index.forum?page=front&amp;" id="frame_chatbox" scrolling="no" width="100%" height="100%" marginwidth="0" marginheight="0" frameborder="0"></iframe>`);
   }
+  $("a").each(function(i,e) {
+    if (e.host=="pmd-roleplay.forumotion.org" && /https?:\/\/pmd-roleplay\.forumotion\.org\/[ft].+/.test(e.href)) {
 
-  $("a.nav,a.forumlink").click(onAjaxClick);
+      $(e).unbind("click.pmdAjax").bind("click.pmdAjax", onAjaxClick);
+    }
+  });
 }
 
-firstInitAjax();
+
+initAjax();

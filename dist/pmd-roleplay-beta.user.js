@@ -6,7 +6,7 @@
 // @include	https://pmd-roleplay.forumotion.org/*
 // @match	https://pmd-roleplay.forumotion.org/*
 // @match	http://pmd-roleplay.forumotion.org/*
-// @version	0.0.2
+// @version	0.0.4
 // @updateURL https://github.com/coaster3000/pmd-roleplay-beta/raw/releases/dist/pmd-roleplay-beta.meta.js
 // @downloadURL https://github.com/coaster3000/pmd-roleplay-beta/raw/releases/dist/pmd-roleplay-beta.user.js
 // @grant	none
@@ -29,10 +29,6 @@ function ajaxComplete() {
   initAjax();
 }
 
-function firstInitAjax() {
-  $("a.mainmenu,a.nav,a.forumlink").click(onAjaxClick);
-}
-
 function onAjaxClick(e) {
   //Display Loader ICON
   var loaderICON = "http://i.imgur.com/6ZwRMCn.gif";
@@ -44,16 +40,22 @@ function onAjaxClick(e) {
   $("#page-body").load(this.href + " #page-body > div", ajaxComplete);
   return false;
 }
+
 function initAjax(){
 
   if ($("#chatbox_top").length > 0) { //Chatbox re-init
     $("#chatbox_top").html(`<iframe src="/chatbox/index.forum?page=front&amp;" id="frame_chatbox" scrolling="no" width="100%" height="100%" marginwidth="0" marginheight="0" frameborder="0"></iframe>`);
   }
+  $("a").each(function(i,e) {
+    if (e.host=="pmd-roleplay.forumotion.org" && /https?:\/\/pmd-roleplay\.forumotion\.org\/[ft].+/.test(e.href)) {
 
-  $("a.nav,a.forumlink").click(onAjaxClick);
+      $(e).unbind("click.pmdAjax").bind("click.pmdAjax", onAjaxClick);
+    }
+  });
 }
 
-firstInitAjax();
+
+initAjax();
 
 
 // Source: src/Main/ToggleAnimations.js

@@ -1,6 +1,6 @@
 {
   "name": "pmd-roleplay-beta",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Provides the necessary userscripts to test out features for the site. These are scripts that will be placed on the site.",
   "main": "Gruntfile.js",
   "scripts": {
