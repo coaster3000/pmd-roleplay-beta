@@ -13,7 +13,7 @@ function firstInitAjax() {
 
 function onAjaxClick(e) {
   //Display Loader ICON
-  var loaderICON = "http://fdzeta.com/data/MetaMirrorCache/_upload_Loading.gif";
+  var loaderICON = "http://i.imgur.com/6ZwRMCn.gif";
   $("body").append(`<div id="loader" style="display: block; width:100%; height: 100%; background-color: rgba(0,0,0,0.3); z-index: 150; position: fixed; top:0; left: 0; padding: 0; margin: 0; text-align: center;"><img src="${loaderICON}" style="margin: auto; position: relative; top: 50%"/></div>`);
 
   ajaxer.page="forum";
