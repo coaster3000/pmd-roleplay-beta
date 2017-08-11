@@ -7,6 +7,8 @@
 // @match	https://pmd-roleplay.forumotion.org/*
 // @match	http://pmd-roleplay.forumotion.org/*
 // @version	@VERSION@
+// @license https://github.com/coaster3000/pmd-roleplay-beta/blob/releases/LICENSE.md
+// @supportURL https://github.com/coaster3000/pmd-roleplay-beta/issues
 // @updateURL https://github.com/coaster3000/pmd-roleplay-beta/raw/releases/dist/pmd-roleplay-beta.meta.js
 // @downloadURL https://github.com/coaster3000/pmd-roleplay-beta/raw/releases/dist/pmd-roleplay-beta.user.js
 // @grant	none

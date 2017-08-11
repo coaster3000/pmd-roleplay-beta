@@ -1,5 +1,9 @@
 # Changelogs
 List of changes between versions of the script.
+## 0.0.5
+- Script Meta Data Changes
+  - Added supportURL metadata.
+  - Added License metadata.
 ## 0.0.4
 - Improved link detection for AJAX features.
 ## 0.0.3
