@@ -1,0 +1,10 @@
+/*
+!/.jshintrc
+!/.gitignore
+!src
+!src/**
+!/*.js
+!/*.json
+!**.md
+!dist
+!dist/**
