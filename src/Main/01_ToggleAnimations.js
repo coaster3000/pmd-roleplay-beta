@@ -46,6 +46,6 @@ var AnimationModule = (function(setcookie,getcookie,$) {
 	}
 
 	return {load: load};
-})(my_setcookie, my_getcookie,jQuery); // jshint -W117
+})(my_setcookie, my_getcookie,jQuery); // jshint ignore:line
 
 // AnimationModule.load();
