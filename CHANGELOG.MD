@@ -1,6 +1,12 @@
 # Changelogs
 List of changes between versions of the script.
 
+## 0.0.6
+- Made userscript entirely modular.
+  - SiteAjax converted into module.
+  - ToggleAnimations converted into module.
+    - Module disabled by default. To enable use ```AnimationModule.load();```
+
 ## 0.0.5
 - Script Meta Data Changes
   - Added supportURL metadata.
