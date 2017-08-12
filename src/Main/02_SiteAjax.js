@@ -58,4 +58,11 @@ var SiteAjax = (function($,w){
       }
     });
   }
+
+  function init() {
+    initAjax();
+  }
+
+  return {init: init};
 })(jQuery, window);
+SiteAjax.init();
