@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name	pmd-rp-beta
 // @namespace	coaster3000@pmd-roleplay.forumotion.com
+// @author coaster3000
 // @description	A userscript that provides beta features for the site pmd-roleplay.forumotion.org. All beta features are eventually added to site once enough feedback is provided on site from userscript testing.
 // @include	http://pmd-roleplay.forumotion.org/*
 // @include	https://pmd-roleplay.forumotion.org/*
