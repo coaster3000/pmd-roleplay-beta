@@ -1,7 +1,9 @@
 var AnimationModule = (function(setcookie,getcookie,$) {
-	const PMD_ANIMATE_COOKIE = "PMD-Animate";
-	const ANIM_DISABLE_TXT = "Disable Animation";
-	const ANIM_ENABLE_TXT = "Enable Animation";
+	'use strict';
+
+	var PMD_ANIMATE_COOKIE = "PMD-Animate";
+	var ANIM_DISABLE_TXT = "Disable Animation";
+	var ANIM_ENABLE_TXT = "Enable Animation";
 
 	function setAnimations(value) {
 		var state = (getcookie(PMD_ANIMATE_COOKIE) > 0);
@@ -44,6 +46,6 @@ var AnimationModule = (function(setcookie,getcookie,$) {
 	}
 
 	return {load: load};
-})(my_setcookie, my_getcookie,jQuery);
+})(my_setcookie, my_getcookie,jQuery); // jshint -W117
 
 // AnimationModule.load();
